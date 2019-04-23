@@ -29,18 +29,21 @@ public class App {
 				}
 
 				position = (AddTooAarray.addToArray(position, 
-						(int) (Math.pow(Algorithms.Velocity_input(velocity), 2)
-						/ GRAVITY * Math.sin(2 * ((Math.PI / 180) * (Algorithms.Angle_input(angle)))))));
-
+						(int) (Math.pow(velocity=Algorithms.Velocity_input(velocity), 2)
+						/ GRAVITY * Math.sin(2 * ((Math.PI / 180) * (angle=Algorithms.Angle_input(angle)))))));
+				
 				if (over == true) {
 					position[tries - 1] *= -1;
-				}
+					System.out.println("your shot :" + (position[tries - 1]*-1 )+ "m");
+					win = goal.nice_shot(Arrayplus.plus_array(position), hole);
+					System.out.println(ResultMessage.Answer(Arrayplus.plus_array(position), hole));
+				}else {
 
 				System.out.println("your shot :" + position[tries - 1] + "m");
 				win = goal.nice_shot(Arrayplus.plus_array(position), hole);
 				System.out.println(ResultMessage.Answer(Arrayplus.plus_array(position), hole));
 
-				tries++;
+				}
 				if (Arrayplus.plus_array(position) < hole) {
 					over = false;
 					System.out.println("The hole location " + hole + "m");
@@ -66,14 +69,14 @@ public class App {
 				}
 
 				System.out.println("your new position: " + Arrayplus.plus_array(position) + "m"
-						+ " your tries " + ":");
-
+						+ " your  " +tries+ " trise is:");
+				tries++;
 				PrintOtu.printStringArray(position);
-				System.out.println();
+				
 				if (tries > 5) {
 					System.out.println("you lost");
 				}
-
+				
 			} while (!win && tries <= 5);
 			angle = 0;
 			dectenc = 1000;
