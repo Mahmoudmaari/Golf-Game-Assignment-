@@ -1,4 +1,4 @@
-package maari.mahmoud.Golf_Game;
+package maari.mahmoud.Golf_Game.date;
 
 import java.util.Arrays;
 
@@ -20,7 +20,7 @@ public class AddTooAarray {
 		}
 		return position;		
 	}
-
+	
 	public static String[] expandArray(String[] source) {
 		return Arrays.copyOf(source, source.length + 1);
 	}

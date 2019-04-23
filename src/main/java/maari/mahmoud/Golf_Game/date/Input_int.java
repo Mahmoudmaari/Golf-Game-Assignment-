@@ -1,4 +1,4 @@
-package maari.mahmoud.Golf_Game;
+package maari.mahmoud.Golf_Game.date;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package maari.mahmoud.Golf_Game;
+package maari.mahmoud.Golf_Game.messages;
 
 public class PrintOtu {
 	public static void printStringArray(int[] toPrint) {

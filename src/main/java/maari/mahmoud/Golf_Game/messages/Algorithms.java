@@ -1,4 +1,6 @@
-package maari.mahmoud.Golf_Game;
+package maari.mahmoud.Golf_Game.messages;
+
+import maari.mahmoud.Golf_Game.date.Input_int;
 
 public class Algorithms {
 	public static int Velocity_input (int velocity ) {
